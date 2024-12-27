@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <title>Omah Sehat Banyuwangi</title>
+	<style>
+        html {
+            margin: 0px auto;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+		
+		* {
+		font-family: sans-serif;
+		}
+        .navbar {
+            height: 20px; /* Mengatur tinggi navbar */
+        }
+    </style>
+</head>
+<body>
+
+	 <nav class="navbar bg-base-100 shadow-lg">
+        <div class="container mx-auto flex justify-end items-center h-full p-0">
+            <ul class="flex space-x-4">
+                <li><a href="login.html" class="btn btn-ghost p-0">Login</a></li>
+                <li><a href="register.html" class="btn btn-ghost p-0">Daftar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Header Section -->
+<header class="bg-base-200">
+    <div class="container mx-auto flex justify-between items-center p-5">
+        <div class="flex items-center">
+            <img src="logo-landscape.png" alt="Logo" class="mr-3" style="width:300px;height:100px" />
+        </div>
+        <nav class="hidden md:flex space-x-4 ml-auto">
+            <a href="#" class="link link-hover">Beranda</a>
+            <a href="#" class="link link-hover">Tentang Kami</a>
+            <a href="#" class="link link-hover">Layanan</a>
+            <a href="#" class="link link-hover">Kontak Kami</a>
+        </nav>
+        <div class="hidden md:block">
+        </div>
+        <div class="md:hidden">
+            <button class="btn btn-ghost" id="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden">
+        <nav class="flex flex-col space-y-2 p-5">
+            <a href="#" class="link link-hover">Beranda</a>
+            <a href="#" class="link link-hover">Tentang Kami</a>
+            <a href="#" class="link link-hover">Layanan</a>
+            <a href="#" class="link link-hover">Kontak Kami</a>
+        </nav>
+    </div>
+</header>
+
+
+		<section class="hero min-h-screen bg-fixed bg-cover bg-center relative" style="background-image: url('team.jpg');" id="beranda">
+		<!-- Gradient Overlay -->
+		<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60"></div>
+		<!-- Color Overlay -->
+		<div class="absolute inset-0 bg-black opacity-40"></div>
+		
+		<div class="hero-content flex-col lg:flex-row-reverse text-white relative z-10">
+			<div data-aos="fade-up" data-aos-delay="300">
+				<h1 class="text-5xl font-bold">Selamat datang di Website resmi </h1>
+				<h1 class="text-5xl font-bold">Omah Sehat Banyuwangi </h1>
+				<p class="py-6">Segera pesan layanan terapi kami secara online untuk mendapatkan tubuh yang sehat dengan klik tombol Order</p>
+				<button class="btn btn-primary">Order</button>
+			</div>
+		</div>
+	</section>
+	<section class="py-12 bg-base-100" id="layanan-terapi">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Layanan Terapi</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Layanan 1 -->
+            <div class="card bg-white shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <img src="terapi-kesehatan.jpg" alt="Layanan 1" class="w-24 h-24 mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Terapi Bekam</h3>
+                <p class="text-gray-600">
+                    <ul>
+                        <li>Seluruh tubuh</li>
+                        <li>Punggung</li>
+                        <li>Kepala</li>
+                        <li>Wajah</li>
+                    </ul>
+                </p>
+            </div>
+            <!-- Layanan 2 -->
+            <div class="card bg-white shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <img src="terapi-kecantikan.jpg" alt="Layanan 2" class="w-24 h-24 mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Terapi Kecantikan</h3>
+                <p class="text-gray-600">
+                    <ul>
+                        <li>Totok Wajah</li>
+                        <li>Facial Detox</li>
+                        <li>Facial Electric</li>
+                        <li>Setrika Wajah</li>
+                        <li>Spa Telinga</li>
+                        <li>Sauna Rempah</li>
+                        <li>Terapi mata</li>
+                    </ul>
+                </p>
+            </div>
+            <!-- Layanan 3 -->
+            <div class="card bg-white shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <img src="terapi-akupuntur.jpg" alt="Layanan 3" class="w-24 h-24 mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Terapi Akupuntur</h3>
+                <p class="text-gray-600">
+                    <ul>
+                        <li>Keluhan</li>
+                        <li>Estetika Glowing</li>
+                        <li>Estetika Pelangsing</li>
+                        <li>Anti Double Chin</li>
+                        <li>Tuina Chuzhen</li>
+                        <li>Aura</li>
+                        <li>Kebutuhan Khusus</li>
+                    </ul>
+                </p>
+            </div>
+            <!-- Layanan 4 -->
+            <div class="card bg-white shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                <img src="terapi-lainnya.jpg" alt="Layanan 4" class="w-24 h-24 mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Terapi lainnya</h3>
+                <p class="text-gray-600">
+                    <ul>
+                        <li>Collon Cleansing</li>
+                        <li>Pembentukan tulang belakang</li>
+                        <li>Terapi Rotan</li>
+                        <li>Terapi Gurah</li>
+                        <li>Terapi Lintah</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 bg-gradient-to-r from-blue-500 via-teal-400 to-indigo-600" id="visi-misi">
+    <div class="container mx-auto px-6 lg:px-16 text-center">
+        <h2 class="text-4xl font-bold mb-8 text-white">Visi dan Misi</h2>
+        <p class="text-gray-200 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            Kami berkomitmen untuk memberikan pelayanan terbaik dalam mencapai kesejahteraan fisik dan mental bagi setiap pelanggan kami.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Visi Section -->
+            <div class="bg-base-200 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow" data-aos="zoom-in-up" data-aos-duration="1000">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800"><i class="fa-brands fa-dart-lang"></i> Visi</h3>
+                <p class="text-gray-600">
+                    Menjadi pusat terapi kesehatan terpercaya yang mengutamakan kualitas layanan dan kepuasan pelanggan.
+                </p>
+            </div>
+            <!-- Misi Section -->
+            <div class="bg-base-200 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow" data-aos="zoom-in-up" data-aos-duration="1000">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800"><i class="fa-solid fa-rocket"></i> Misi</h3>
+                <ul class="list-disc text-gray-600 pl-4 text-left">
+                    <li>Menyediakan layanan terapi berkualitas dengan pendekatan holistik.</li>
+                    <li>Mengutamakan profesionalisme dan etika dalam setiap layanan.</li>
+                    <li>Meningkatkan kesadaran masyarakat tentang pentingnya kesehatan.</li>
+                    <li>Menyediakan fasilitas yang nyaman dan modern untuk pelanggan.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-20" id="team">
+    <h2 class="text-4xl font-bold text-center mb-10">Meet Our Team</h2>
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Team Member 1 -->
+        <div class="card bg-base-200 shadow-xl w-64 mx-auto" data-aos="flip-right" data-aos-duration="2000">
+            <figure>
+                <img src="alin.jpg" alt="Team Member 1" class="rounded-t-lg w-full h-48 object-cover mx-auto" onclick="openLightbox(this)"/>
+            </figure>
+            <div class="card-body">
+                <h3 class="text-xl font-semibold">Alin</h3>
+                <p class="text-gray-500">Therapist</p>
+                <p>Halo, saya Alin, terapis kesehatan dan kecantikan alternatif.</p>
+            </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="card bg-base-200 shadow-xl w-64 mx-auto" data-aos="flip-right" data-aos-duration="2000">
+            <figure>
+                <img src="asnawi.jpg" alt="Team Member 2" class="rounded-t-lg w-full h-48 object-cover mx-auto" onclick="openLightbox(this)"/>
+            </figure>
+            <div class="card-body">
+                <h3 class="text-xl font-semibold">Asnawi</h3>
+                <p class="text-gray-500">Therapist</p>
+                <p>Saya Asnawi, terapis alternatif profesional yang siap memberikan Solusi Sehat dan Bugar untuk Anda.</p>
+            </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="card bg-base-200 shadow-xl w-64 mx-auto" data-aos="flip-right" data-aos-duration="2000">
+            <figure>
+                <img src="asty.jpg" alt="Team Member 3" class="rounded-t-lg w-full h-48 object-cover mx-auto" onclick="openLightbox(this)"/>
+            </figure>
+            <div class="card-body">
+                <h3 class="text-xl font-semibold">Asty</h3>
+                <p class="text-gray-500">Therapist</p>
+                <p>Saya Asty, terapis kesehatan dan kecantikan alternatif.</p>
+            </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="card bg-base-200 shadow-xl w-64 mx-auto" data-aos="flip-right" data-aos-duration="2000">
+            <figure>
+                <img src="niken.jpg" alt="Team Member 4" class="rounded-t-lg w-full h-48 object-cover mx-auto" onclick="openLightbox(this)"/>
+            </figure>
+            <div class="card-body">
+                <h3 class="text-xl font-semibold">Niken</h3>
+                <p class="text-gray-500">Therapist</p>
+                <p>Perkenalkan, saya Niken Kurnia, terapis kesehatan dan kecantikan yang menggabungkan keahlian Akupuntur Cina dan Thibunabawi.</p>
+            </div>
+        </div>
+        <!-- Team Member 5 -->
+        <div class="card bg-base-200 shadow-xl w-64 mx-auto" data-aos="flip-right" data-aos-duration="2000">
+            <figure>
+                <img src="putriyani.jpg" alt="Team Member 5" class="rounded-t-lg w-full h-48 object-cover mx-auto" onclick="openLightbox(this)"/>
+            </figure>
+            <div class="card-body">
+                <h3 class="text-xl font-semibold">Putriyani</h3>
+                <p class="text-gray-500">Therapist</p>
+                <p class="">Salam sehat! Saya Putriyani, terapis kesehatan alternatif dengan keahlian dalam bekam, reposisi tulang sendi, serta totok wajah.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 bg-gradient-to-r from-green-400 to-green-600 text-white" id="daftar-jadi-terapis">
+    <div class="container mx-auto px-6 lg:px-16 text-center">
+        <h2 class="text-4xl font-bold mb-8 text-white">Bergabung Menjadi Terapi Profesional Kami</h2>
+        <p class="text-white mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            Kami mencari terapis berpengalaman untuk bergabung dalam tim kami dan membantu pelanggan mencapai kesejahteraan fisik dan mental.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow" data-aos="zoom-in-up" data-aos-duration="1000">
+                <h3 class="text-xl font-semibold mb-4 text-black">Keuntungan 1</h3>
+                <p class="text-gray-600">Dapatkan pelatihan dan pengembangan profesional untuk meningkatkan keterampilan Anda.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow" data-aos="zoom-in-up" data-aos-duration="1000">
+                <h3 class="text-xl font-semibold mb-4 text-black">Keuntungan 2</h3>
+                <p class="text-gray-600">Bergabung dengan tim yang penuh dukungan dan lingkungan kerja yang positif.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow" data-aos="zoom-in-up" data-aos-duration="1000">
+                <h3 class="text-xl font-semibold mb-4 text-black">Keuntungan 3</h3>
+                <p class="text-gray-600">Peluang untuk membangun karier Anda di industri terapi yang berkembang.</p>
+            </div>
+        </div>
+        <div class="mt-8" data-aos="zoom-in-up" data-aos-duration="1000">
+            <a href="#apply" class="btn btn-primary text-white">Daftar Sekarang</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full Image" class="max-w-full max-h-full" />
+</div>
+
+<section class="py-12 bg-base-100" id="katalog-produk">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Katalog Produk</h2>
+        <div class="relative overflow-hidden">
+            <div class="carousel flex w-full overflow-x-auto snap-x snap-mandatory scroll-smooth justify-center" id="carousel">
+                <!-- Item 1 -->
+                <div class="carousel-item snap-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 flex justify-center">
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="produk-1.jpg" alt="Produk 1" class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Trace Mineral Impro</h3>
+                            <p class="text-gray-600">Deskripsi singkat produk.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="carousel-item snap-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 flex justify-center">
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="produk2.jpg" alt="Produk 2" class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Produk 2</h3>
+                            <p class="text-gray-600">Deskripsi singkat produk.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="carousel-item snap-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 flex justify-center">
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="produk3.jpg" alt="Produk 3" class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Produk 3</h3>
+                            <p class="text-gray-600">Deskripsi singkat produk.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="carousel-item snap-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 flex justify-center">
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="produk4.jpg" alt="Produk 4" class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Produk 4</h3>
+                            <p class="text-gray-600">Deskripsi singkat produk.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <button id="prevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 btn btn-circle btn-sm z-10 bg-gray-800 text-white">❮</button>
+            <button id="nextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 btn btn-circle btn-sm z-10 bg-gray-800 text-white">❯</button>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-5 right-5 p-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition duration-300">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+ <!-- Footer Section -->
+ <footer class="footer p-10 bg-gray-800 text-white">
+     <div>
+         <span class="footer-title">Alamat</span>
+         <p class="text-gray-400">Jl. Cemara No.20, Kebalenan,<br> Kec. Banyuwangi, Kabupaten Banyuwangi,<br> Jawa Timur 68417</p>
+         <br>
+         <p class="text-gray-400"><b>Telp:</b> 082302030800</p>
+         <p class="text-gray-400"><b>Email:</b> omahsehatbwi@gmail.com</p>
+     </div>
+     <div>
+            <span class="footer-title">Perusahaan</span>
+            <a class="link link-hover" href="#beranda">Beranda</a>
+            <a class="link link-hover" href="#layanan-terapi">Layanan Terapi</a>
+            <a class="link link-hover" href="#visi-misi">Visi dan Misi</a>
+            <a class="link link-hover" href="#team">Meet our Team</a>
+            <a class="link link-hover" href="#daftar-jadi-terapis">Daftar jadi Therapist</a>
+            <a class="link link-hover" href="#katalog-produk">Katalog Produk</a>
+        </div>
+        <div>
+            <span class="footer-title">Layanan</span>
+            <a class="link link-hover">Terapi Bekam</a>
+            <a class="link link-hover">Terapi Kecantikan</a>
+            <a class="link link-hover">Terapi Akupuntur</a>
+            <a class="link link-hover">Terapi lainnya</a>
+        </div>
+        <div>
+            <span class="footer-title">Sosial Media</span>
+            <div class="grid grid-flow-col gap-4">
+                <a href="https://www.instagram.com/omahsehat.banyuwangi/" target="_blank" class="link link-hover">
+                    <i class="fa-brands fa-instagram" style="font-size: 20pt;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/omah-sehat-bunda-banyuwangi-1a968b301/" target="_blank" class="link link-hover">
+                    <i class="fa-brands fa-linkedin" style="font-size: 20pt;"></i>
+                </a>
+                <a href="https://www.facebook.com/omahsehat.banyuwangi" target="_blank" class="link link-hover">
+                    <i class="fa-brands fa-facebook" style="font-size: 20pt;"></i>
+                </a>
+                <a href="https://www.tiktok.com/@omahsehat.banyuwangi?_t=8sYrzHfiJb2&_r=1" target="_blank" class="link link-hover">
+                    <i class="fa-brands fa-tiktok" style="font-size: 20pt"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <div class="footer footer-center p-4 bg-gray-900 text-white">
+        <div>
+            <p>Hak Cipta © 2024 - Alright Reserved, Oleh Omah Sehat Banyuwangi</p>
+        </div>
+    </div>
+	
+    
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
+    <script>
+        // Get the button
+        const scrollToTopButton = document.getElementById("scrollToTop");
+
+        // Show the button when scrolling down
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        };
+
+        // Scroll to top function
+        scrollToTopButton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+
+    <script>
+        // Optional: Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.parentElement.contains(event.target)) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        });
+    </script>
+	
+	<!-- JavaScript -->
+<script>
+    // Ambil elemen-elemen
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Event listener untuk tombol menu
+    menuToggle.addEventListener('click', function() {
+        // Toggle kelas 'hidden' untuk menampilkan atau menyembunyikan menu
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+<script>
+// Function to open lightbox
+function openLightbox(imgElement) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = imgElement.src; // Set the source of the lightbox image
+    lightbox.classList.remove('hidden'); // Show the lightbox
+}
+
+// Function to close lightbox
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.add('hidden'); // Hide the lightbox
+}
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.carousel-item');
+        let currentSlide = 0;
+        const slideInterval = 4000; // Interval waktu (ms)
+
+        // Menampilkan slide berdasarkan index
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        // Menampilkan slide berikutnya
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Menampilkan slide sebelumnya
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Tampilkan slide pertama saat halaman dimuat
+        showSlide(currentSlide);
+
+        // Menjadwalkan auto slide setiap interval
+        setInterval(nextSlide, slideInterval);
+
+        // Menambahkan event listener untuk tombol navigasi
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Pilih semua anchor link dengan atribut href yang diawali dengan #
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    // Loop untuk menambahkan event listener pada setiap link
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault(); // Mencegah aksi default (scroll langsung)
+            
+            const targetId = this.getAttribute('href'); // Ambil target id dari href
+            const targetElement = document.querySelector(targetId); // Pilih elemen berdasarkan id
+            
+            // Lakukan smooth scroll ke target dengan scrollIntoView
+            targetElement.scrollIntoView({
+                behavior: 'smooth', // Membuat smooth scroll
+                block: 'start' // Scroll mulai dari bagian atas elemen
+            });
+        });
+    });
+});
+
+</script>
+
+</body>
+</html>

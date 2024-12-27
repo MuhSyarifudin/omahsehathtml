@@ -29,6 +29,16 @@
         .dark .text-custom-dark {
             color: white;
         }
+        .gradient-green {
+            background: linear-gradient(to right, #38a169, #2f855a); /* Custom static gradient */
+
+        }
+        .gradient-blue {
+            background: linear-gradient(to right, #3b82f6, #6366f1)
+        }
+        .gradient-black {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.6));
+        }
 
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -83,9 +93,9 @@
 </header>
 
 
-		<section class="hero min-h-screen bg-fixed bg-cover bg-center relative" style="background-image: url('team.jpg');" id="beranda">
+	<section class="hero min-h-screen bg-fixed bg-cover bg-center relative" style="background-image: url('team.jpg');" id="beranda">
 		<!-- Gradient Overlay -->
-		<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60"></div>
+		<div class="absolute inset-0 bg-gradient-black from-black/60 via-transparent to-black/60 h-full"></div>
 		<!-- Color Overlay -->
 		<div class="absolute inset-0 bg-black opacity-40"></div>
 		
@@ -98,12 +108,13 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="py-12 bg-base-100" id="layanan-terapi">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-8">Layanan kami</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <!-- Layanan 1 -->
-            <div class="card bg-white shadow-lg rounded-lg p-4 text-center dark:bg-gray-800" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <div class="card bg-base-200 shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <img src="terapi-kesehatan.jpg" alt="Layanan 1" class="w-24 h-24 mx-auto mb-4 object-cover">
                 <h3 class="text-xl font-semibold mb-2">Terapi Bekam</h3>
                 <p class="text-gray-600">
@@ -116,7 +127,7 @@
                 </p>
             </div>
             <!-- Layanan 2 -->
-            <div class="card bg-white shadow-lg rounded-lg p-4 text-center dark:bg-gray-800" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <div class="card bg-base-200 shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <img src="terapi-kecantikan.jpg" alt="Layanan 2" class="w-24 h-24 mx-auto mb-4 object-cover">
                 <h3 class="text-xl font-semibold mb-2">Terapi Kecantikan</h3>
                 <p class="text-gray-600">
@@ -132,7 +143,7 @@
                 </p>
             </div>
             <!-- Layanan 3 -->
-            <div class="card bg-white shadow-lg rounded-lg p-4 text-center dark:bg-gray-800" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <div class="card bg-base-200 shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <img src="terapi-akupuntur.jpg" alt="Layanan 3" class="w-24 h-24 mx-auto mb-4 object-cover">
                 <h3 class="text-xl font-semibold mb-2">Terapi Akupuntur</h3>
                 <p class="text-gray-600">
@@ -148,7 +159,7 @@
                 </p>
             </div>
             <!-- Layanan 4 -->
-            <div class="card bg-white shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+            <div class="card bg-base-200 shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <img src="rawat-luka.jpg" alt="Layanan 4" class="w-24 h-24 mx-auto mb-4 object-cover">
                 <h3 class="text-xl font-semibold mb-2">Perawatan Luka</h3>
                 <p class="text-gray-600">
@@ -158,7 +169,7 @@
                     </ul>
                 </p>
             </div>
-            <div class="card bg-base-200 shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            <div class="card bg-base-200 shadow-lg rounded-lg p-4 text-center" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <img src="cek-kesehatan.jpeg" alt="Layanan 4" class="w-24 h-24 mx-auto mb-4 object-cover">
                 <h3 class="text-xl font-semibold mb-2">Cek Kesehatan</h3>
                 <p class="text-gray-600">
@@ -186,7 +197,7 @@
     </div>
 </section>
 
-<section class="py-12 bg-gradient-to-r from-blue-500 via-teal-400 to-indigo-600" id="visi-misi">
+<section class="py-12 gradient-blue from-blue-500 via-teal-400 to-indigo-600" id="visi-misi">
     <div class="container mx-auto px-6 lg:px-16 text-center">
         <h2 class="text-4xl font-bold mb-8 text-white">Visi & Misi</h2>
         <p class="text-gray-200 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
@@ -194,14 +205,14 @@
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Visi Section -->
-            <div class="bg-base-200 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow" data-aos="zoom-in-up" data-aos-duration="1000">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow" data-aos="zoom-in-up" data-aos-duration="1000">
                 <h3 class="text-2xl font-semibold mb-4 text-gray-800"><i class="fa-brands fa-dart-lang"></i> Visi</h3>
                 <p class="text-gray-600 text-custom-dark">
                     Menjadi pusat terapi kesehatan terpercaya yang mengutamakan kualitas layanan dan kepuasan pelanggan.
                 </p>
             </div>
             <!-- Misi Section -->
-            <div class="bg-base-200 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow" data-aos="zoom-in-up" data-aos-duration="1000">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow" data-aos="zoom-in-up" data-aos-duration="1000">
                 <h3 class="text-2xl font-semibold mb-4 text-gray-800"><i class="fa-solid fa-rocket"></i> Misi</h3>
                 <ul class="list-disc text-gray-600 pl-4 text-left text-custom-dark">
                     <li>Menyediakan layanan terapi berkualitas dengan pendekatan holistik.</li>
@@ -213,6 +224,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- Team Section -->
 <section class="py-20" id="team">
@@ -226,7 +238,7 @@
             <div class="card-body">
                 <h3 class="text-xl font-semibold">Alin</h3>
                 <p class="text-gray-500">Therapist</p>
-                <p> <i>Halo, saya Alin, terapis kesehatan dan kecantikan alternatif. Dengan pendekatan holistik, saya berkomitmen untuk membantu Anda meraih keseimbangan tubuh dan pikiran serta meningkatkan kepercayaan diri melalui perawatan alami dan menyeluruh.</i> </p>
+                <p> <i>"Halo, saya Alin, terapis kesehatan dan kecantikan alternatif. Dengan pendekatan holistik, saya berkomitmen untuk membantu Anda meraih keseimbangan tubuh dan pikiran serta meningkatkan kepercayaan diri melalui perawatan alami dan menyeluruh."</i> </p>
             </div>
         </div>
         <!-- Team Member 2 -->
@@ -276,7 +288,7 @@
     </div>
 </section>
 
-<section class="py-12 bg-gradient-to-r from-green-400 to-green-600 text-white" id="daftar-jadi-terapis">
+<section class="py-12 gradient-green from-green-400 to-green-600 text-white" id="daftar-jadi-terapis">
     <div class="container mx-auto px-6 lg:px-16 text-center">
         <h2 class="text-4xl font-bold mb-8 text-white">Bergabung Menjadi Terapi Profesional Kami</h2>
         <p class="text-white mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
@@ -331,7 +343,6 @@
         </div>
     </div>
 </section>
-
 
  <!-- Scroll to Top Button -->
     <button id="scrollToTop" class="fixed bottom-5 right-5 p-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition duration-300">
